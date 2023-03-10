@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
 class Home extends Component {
+  state = {
+    nome: 'thamyris'
+  }
   render() {
     const {history} = this.props
     return (
@@ -9,7 +12,7 @@ class Home extends Component {
         <p> My awesome Home component </p>
         <button 
         type='button'
-        onClick={ () => history.push('/about') }
+        onClick={ () => history.push('/about', this.state) }
         > ir para about</button>
       </div>
     );
