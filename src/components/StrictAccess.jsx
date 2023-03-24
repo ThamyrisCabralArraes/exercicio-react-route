@@ -7,7 +7,6 @@ class StrictAccess extends Component {
     const {user, password} = this.props
 
     if (user !== "joao" || password !== "1234") {
-      console.log('opa')
       alert("Acess denied")
       return <Redirect to="/" />
     }
